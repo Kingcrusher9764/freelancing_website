@@ -44,7 +44,7 @@ This is a web application for freelancers and clients to connect and collaborate
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/freelancing-website.git
+git clone https://github.com/Kingcrusher9764/freelancing-website.git
 ```
 
 2. Install dependencies:
