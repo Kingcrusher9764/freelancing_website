@@ -12,7 +12,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 mongoose.set("strictQuery", true)
-mongoose.connect("mongodb+srv://Kingcrusher:Kingcrusher@cluster0.kgkmnhs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&dbname=fiverr")
+mongoose.connect(process.env.MongoURL)
 .then(()=>{console.log("Connected to MongoDB")})
 .catch((err)=>{console.log(err.message)})
 
