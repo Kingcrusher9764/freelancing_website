@@ -5,8 +5,7 @@ This is a web application for freelancers and clients to connect and collaborate
 ## Table of Contents
 
 - [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
+- [Technologies Used](#technologies-using)
 - [Usage](#usage)
 
 ## Features
@@ -38,31 +37,6 @@ This is a web application for freelancers and clients to connect and collaborate
   - Stripe API (or any other payment gateway)
 - **Version Control**:
   - Git (GitHub, GitLab, etc.)
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Kingcrusher9764/freelancing-website.git
-```
-
-2. Install dependencies:
-
-```bash
-cd freelancing-website
-npm install
-```
-
-3. Set up environment variables:
-   - Create a `.env` file in the root directory.
-   - Define environment variables such as mongodb database connection url, JWT_KEY, etc.
-
-4. Start the server:
-
-```bash
-npm start
-```
 
 ## Usage
 
