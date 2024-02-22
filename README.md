@@ -21,7 +21,7 @@ This is a web application for freelancers and clients to connect and collaborate
 - **Search and Filters**: Users can search for freelancers or projects based on various criteria.
 - **Admin Panel**: An admin panel to manage users, projects, payments, and other aspects of the platform.
 
-## Technologies Used
+## Technologies Using
 
 - **Frontend**:
   - HTML/CSS
