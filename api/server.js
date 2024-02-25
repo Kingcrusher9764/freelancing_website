@@ -8,6 +8,7 @@ const orderRoute = require("./routes/orderRoute")
 const reviewRoute = require("./routes/reveiwRoute")
 const authRoute = require("./routes/authRoute")
 const cookieParser = require("cookie-parser")
+const cors = require("cors")
 const dotenv = require("dotenv")
 dotenv.config()
 
@@ -18,6 +19,7 @@ mongoose.connect(process.env.MongoURL)
 
 const app = express()
 
+app.use(cors({origin:"http://localhost:5173", credentials:true}))
 app.use(express.json())
 app.use(cookieParser())
 
