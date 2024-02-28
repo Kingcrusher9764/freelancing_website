@@ -16,7 +16,7 @@ const MyGigs = ()=>{
     })
 
     const mutation = useMutation({
-        mutationFn: (id)=>{ return newRequest.delete(`/gig/${id}`) },
+        mutationFn: (id)=>{ return newRequest.delete(`/gigs/${id}`) },
         onSuccess:()=>{ queryClient.invalidateQueries(['myGigs']) }
     })
 
