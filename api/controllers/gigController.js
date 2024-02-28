@@ -7,6 +7,7 @@ const createGig = async (req, res, next)=>{
         userId: req.userId,
         ...req.body,
     })
+    
     try{
         const savedGig = await newGig.save()
         res.status(201).json(savedGig)

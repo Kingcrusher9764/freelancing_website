@@ -10,9 +10,9 @@ const MyGigs = ()=>{
 
     const currentUser = JSON.parse(localStorage.getItem("currentUser"))
 
-    const {isLoading, error, data, refetch} = useQuery({
+    const {isLoading, error, data} = useQuery({
         queryKey: ['myGigs'],
-        queryFn: ()=>newRequest.get(`/gigs?userId=${currentUser.id}`).then((res)=>res.data)
+        queryFn: ()=>newRequest.get(`/gigs?userId=${currentUser._id}`).then((res)=>res.data)
     })
 
     const mutation = useMutation({
@@ -33,24 +33,26 @@ const MyGigs = ()=>{
                 </div>
 
                 <table>
-                    <tr>
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Price</th>
-                        <th>Sales</th>
-                        <th>Action</th>
-                    </tr>
-
-                    {data.map(gig=>(<tr key={gig._id}>
-                        <td><img className="img" src={gig.cover} alt="" /></td>
-                        <td>{gig.title}</td>
-                        <td>{gig.price}</td>
-                        <td>{gig.sales}</td>
-                        <td>
-                            <img className="delete" src="/img/delete.png" onClick={()=>handleDelete(gig._id)} alt="" />
-                        </td>
-                    </tr>))}
-                    
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Sales</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map(gig=>(<tr key={gig._id}>
+                            <td><img className="img" src={gig.cover} alt="" /></td>
+                            <td>{gig.title}</td>
+                            <td>{gig.price}</td>
+                            <td>{gig.sales}</td>
+                            <td>
+                                <img className="delete" src="/img/delete.png" onClick={()=>handleDelete(gig._id)} alt="" />
+                            </td>
+                        </tr>))}
+                    </tbody>
                 </table>
             </div>)}
         </div>
