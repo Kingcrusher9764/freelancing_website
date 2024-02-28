@@ -19,6 +19,8 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom"
+import Pay from "./pages/pay/pay"
+import Success from "./pages/Success/Success"
 
 function App() {
 
@@ -80,6 +82,12 @@ function App() {
         {
           path: "/register",
           element: <Register />
+        },{
+          path: "/pay/:id",
+          element: <Pay />
+        },{
+          path: "/success",
+          element: <Success />
         }
       ]
     }
