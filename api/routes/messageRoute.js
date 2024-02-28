@@ -1,8 +1,10 @@
 const express = require("express")
-const {deleteUser} = require("../controllers/userController")
+const {createMessage,getMessages} = require("../controllers/messageController")
+const { verifyToken } = require("../middleware/jwt")
 
 const router = express.Router()
 
-router.get("/test", )
+router.post("/", verifyToken, createMessage )
+router.get("/:id", verifyToken, getMessages )
 
 module.exports = router
