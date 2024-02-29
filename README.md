@@ -15,12 +15,11 @@ This is a web application for freelancers and clients to connect and collaborate
 - **Project Posting**: Clients can post projects with descriptions, requirements, and deadlines.
 - **Browsing Projects**: Users can browse projects posted by clients and apply for them.
 - **Messaging System**: Users can communicate with each other through an in-app messaging system.
-- **Payment Integration**: Integration with payment gateways for secure transactions.
 - **Rating and Reviews**: Clients and freelancers can leave ratings and reviews for each other.
 - **Search and Filters**: Users can search for freelancers or projects based on various criteria.
 - **Admin Panel**: An admin panel to manage users, projects, payments, and other aspects of the platform.
 
-## Technologies Using
+## Technologies Used
 
 - **Frontend**:
   - HTML/CSS
@@ -33,8 +32,6 @@ This is a web application for freelancers and clients to connect and collaborate
   - bcrypt (for password hashing)
 - **Messaging**:
   - WebSocket (Socket.io)
-- **Payment Integration**:
-  - Stripe API (or any other payment gateway)
 - **Version Control**:
   - Git (GitHub, GitLab, etc.)
 
@@ -45,5 +42,4 @@ This is a web application for freelancers and clients to connect and collaborate
 3. Browse projects or post a new project (if you're a client).
 4. Apply for projects or hire freelancers based on your requirements.
 5. Communicate with other users using the messaging system.
-6. Complete transactions securely using integrated payment gateways.
-7. Leave ratings and reviews for freelancers or clients after project completion.
+6. Leave ratings and reviews for freelancers or clients after project completion.
