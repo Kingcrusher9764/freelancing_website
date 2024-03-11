@@ -28,7 +28,7 @@ const Gig = ()=>{
         <div className="gig">
             {isLoading ? "Loading" : error ? "Something went wrong!" : (<div className="container">
                 <div className="left">
-                    <span className="breadCrumbs">FreeLance {">"} Graphics & Design {">"} </span>
+                    <span className="breadCrumbs">FreeLance {">"} </span>
                     <h1>{data?.title}</h1>
                     {isLoadingUser ? "Loading" : errorUser ? "Something went wrong!" : (<div className="user">
                         <img className="pp" src={dataUser.img || "/img/noavatar.jpg"} alt="" />
