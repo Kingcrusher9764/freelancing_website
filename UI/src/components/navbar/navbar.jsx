@@ -83,15 +83,14 @@ const Navbar = ()=>{
                 <>
                 <hr />
                 <div className="menu">
-                    <Link to="/" className="link menuLink">Graphisc & Design</Link>
-                    <Link to="/" className="link">Video & Animation</Link>
-                    <Link to="/" className="link">Writing & Translation</Link>
-                    <Link to="/" className="link">AI Services</Link>
-                    <Link to="/" className="link">Digital Marketing</Link>
-                    <Link to="/" className="link">Music & Audio</Link>
-                    <Link to="/" className="link">Programming & Tech</Link>
-                    <Link to="/" className="link">Business</Link>
-                    <Link to="/" className="link">Lifestyle</Link>
+                    <Link to="/gigs?cat=design" className="link menuLink">Graphisc & Design</Link>
+                    <Link to="/gigs?cat=animation" className="link">Video & Animation</Link>
+                    <Link to="/gigs?cat=web" className="link">Web Development</Link>
+                    <Link to="/gigs?cat=ai" className="link">AI Services</Link>
+                    <Link to="/gigs?cat=media" className="link">Digital Marketing</Link>
+                    <Link to="/gigs?cat=audio" className="link">Music & Audio</Link>
+                    <Link to="/gigs?cat=video" className="link">Video Maker</Link>
+                    <Link to="/gigs?cat=seo" className="link">Website Ranking</Link>
                 </div>
                 <hr />
                 </>

@@ -38,11 +38,11 @@ const Gigs = ()=>{
     return (
         <div className="gigs">
             <div className="container">
-                <span className="breadcrumbs">FreeLance - Graphics & Design - </span>
-                <h1>AI Artist</h1>
+                <span className="breadcrumbs">FreeLance - </span>
+                {/* <h1>AI Artist</h1>
                 <p>
                     Explore the boundaries of art and technology with FreeLance's AI artists
-                </p>
+                </p> */}
                 <div className="menu">
                     <div className="left">
                         <span>Budget</span>

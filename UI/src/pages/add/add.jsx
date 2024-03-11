@@ -74,10 +74,14 @@ const Add = ()=>{
                         <input name="title" onChange={handleChange} type="text" placeholder="e.g. I will do something I'm really good at" />
                         <label htmlFor="">Category</label>
                         <select name="cat" id="cat" onChange={handleChange}>
+                            <option value="ai">AI Artists</option>
                             <option value="design">Design</option>
                             <option value="web">Web Development</option>
+                            <option value="audio">Voice over</option>
+                            <option value="video">Video Explainer</option>
+                            <option value="media">Social Media</option>
+                            <option value="seo">SEO</option>
                             <option value="animation">Animation</option>
-                            <option value="music">Music</option>
                         </select>
                         <div className="images">
                             <div className="imagesInput">
