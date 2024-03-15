@@ -1,0 +1,29 @@
+#payment-form{
+    width: 1200px;
+    margin: 70px auto;
+    font-size: 24px;
+    border: 0.5px solid rgb(231, 230, 230);
+    padding: 20px;
+    border-radius: 10px;
+    color: lightgray;
+
+    h2{
+        font-weight: 500;
+        color: rgb(121, 119, 119);
+        margin-bottom: 20px;
+    }
+
+    button{
+        font-size: 16px;
+        font-weight: 300;
+        padding: 10px 20px;
+        background-color: green;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    
+}
