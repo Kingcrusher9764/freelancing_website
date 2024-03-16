@@ -19,7 +19,7 @@ const Gig = ()=>{
     const userId = data?.userId
 
     const {isLoading: isLoadingUser, error: errorUser, data: dataUser} = useQuery({
-        queryKey: ['user'],
+        queryKey: [`user${userId}`],
         queryFn: ()=>newRequest.get(`/users/${userId}`).then((res)=>res.data),
         enabled: !!userId,
     })
