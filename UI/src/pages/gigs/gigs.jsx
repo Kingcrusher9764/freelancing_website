@@ -16,7 +16,7 @@ const Gigs = ()=>{
     const {search} = useLocation()
 
     const {isLoading, error, data, refetch} = useQuery({
-        queryKey: ['gigs'],
+        queryKey: [`gigs${search}`],
         queryFn: ()=>newRequest.get(`/gigs${search}&min=${minRef.current.value}&max=${maxRef.current.value}&sort=${sort}`).then((res)=>res.data)
     })
 
