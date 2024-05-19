@@ -12,7 +12,7 @@ import MyGigs from "./pages/myGigs/myGigs"
 import Orders from "./pages/order/order"
 import Login from "./pages/login/login"
 import Register from "./pages/register/register"
-import {QueryClient, QueryClientProvider, useQuery} from "@tanstack/react-query"
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query"
 
 import {
   createBrowserRouter,

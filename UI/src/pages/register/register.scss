@@ -76,6 +76,21 @@
                 color: black;
                 font-size: 16px;
             }
+            button{
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 10px 20px;
+                background-color: rgb(7, 112, 7);
+                color: white;
+            }
+            span:last-child{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+            }
         }
     }
 }

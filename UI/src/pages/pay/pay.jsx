@@ -6,10 +6,15 @@ import newRequest from "../../utils/newRequest"
 import {useParams} from "react-router-dom"
 import CheckoutForm from "../../components/checkoutForm/checkoutForm";
 
+import QRpayment from "../../components/QRpayment/QRpayment";
+
 const stripePromise = loadStripe("pk_test_51OokHrSHioAVIRAYM75TN3KVrLZVEIRF5h44lqARYktr5xAuwIJGE3y0CipcXDqdxakupor9E1xnxtxAQxsM93kD00EwvzYTim");
 
 const Pay = ()=>{
     const [clientSecret, setClientSecret] = useState("");
+    const [paymentIntent, setPaymentIntent] = useState("");
+    const [sellerId, setSellerId] = useState("")
+    const [amount, setAmount] = useState(null);
 
     const {id} = useParams()
 
@@ -18,6 +23,11 @@ const Pay = ()=>{
             try{
                 const res = await newRequest.post(`/orders/create-payment-intent/${id}`)
                 setClientSecret(res.data.clientSecret)
+                setAmount(res.data.price)
+                setPaymentIntent(res.data.paymentIntentId)
+                setSellerId(res.data.sellerId)
+                console.log(paymentIntent)
+                console.log(res.data)
             }catch(err){
                 console.log(err)
             }
@@ -37,7 +47,8 @@ const Pay = ()=>{
         <div className="pay">
             {clientSecret && (
                 <Elements options={options} stripe={stripePromise}>
-                    <CheckoutForm />
+                    {/* <CheckoutForm /> */}
+                    <QRpayment amount={amount} sellerId={sellerId} paymentIntent={paymentIntent} />
                 </Elements>
             )}
         </div>

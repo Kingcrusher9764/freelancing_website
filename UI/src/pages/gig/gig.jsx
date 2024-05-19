@@ -64,7 +64,7 @@ const Gig = ()=>{
                                     ))}
                                     <span>{Math.round(data.totalStars / data.starNumber)}</span>
                                 </div>)}
-                                <button>Contact Me</button>
+                                <a href={`mailto:${dataUser.email}`} ><button>Contact Me</button></a>
                             </div>
                         </div>
 
@@ -107,7 +107,7 @@ const Gig = ()=>{
                 <div className="right">
                     <div className="price">
                         <h3>{data.shortTitle}</h3>
-                        <h2>$ {data.price} </h2>
+                        <h2> Rs. {data.price} </h2>
                     </div>
                     <p>
                         {data.shortDesc}

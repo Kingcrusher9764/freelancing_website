@@ -1,0 +1,81 @@
+.register{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        border: 0.5px solid lightgray;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        .left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h1{
+                font-weight: bold;
+                font-size: 24px;
+                color: rgb(61, 60, 60);
+            }
+            label{
+                font-weight: 500;
+                color: gray;
+                font-size: 20px;
+            }
+            input{
+                padding: 15px;
+                border: 0.5px solid lightgray;
+                border-radius: 5px;
+                color: black;
+                font-size: 16px;
+            }
+            button{
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 10px 20px;
+                background-color: rgb(7, 112, 7);
+                color: white;
+            }
+        }
+        .right{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            span{
+                margin: 25px 0px;
+            }
+            h1{
+                font-weight: bold;
+                font-size: 24px;
+                color: rgb(61, 60, 60);
+            }
+            label{
+                font-weight: 500;
+                color: gray;
+                font-size: 20px;
+            }
+            input{
+                padding: 15px;
+                border: 0.5px solid lightgray;
+                border-radius: 5px;
+                color: black;
+                font-size: 16px;
+            }
+            textarea{
+                padding: 15px;
+                border: 0.5px solid lightgray;
+                border-radius: 5px;
+                color: black;
+                font-size: 16px;
+            }
+        }
+    }
+}

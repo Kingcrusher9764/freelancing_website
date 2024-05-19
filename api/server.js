@@ -7,6 +7,9 @@ const messageRoute = require("./routes/messageRoute")
 const orderRoute = require("./routes/orderRoute")
 const reviewRoute = require("./routes/reveiwRoute")
 const authRoute = require("./routes/authRoute")
+const otp_mailer = require("./routes/otp_mailer")
+const mailer = require("./routes/mailer")
+
 const cookieParser = require("cookie-parser")
 const cors = require("cors")
 const dotenv = require("dotenv")
@@ -14,12 +17,12 @@ dotenv.config()
 
 mongoose.set("strictQuery", true)
 mongoose.connect(process.env.MongoURL)
-.then(()=>{console.log("Connected to MongoDB")})
-.catch((err)=>{console.log(err.message)})
+    .then(() => { console.log("Connected to MongoDB") })
+    .catch((err) => { console.log(err.message) })
 
 const app = express()
 
-app.use(cors({origin:"http://localhost:5173", credentials:true}))
+app.use(cors({ origin: `${process.env.ORIGIN}`, credentials: true }))
 app.use(express.json())
 app.use(cookieParser())
 
@@ -30,13 +33,15 @@ app.use("/api/conversations", converstaionRoute)
 app.use("/api/messages", messageRoute)
 app.use("/api/reviews", reviewRoute)
 app.use("/api/auth", authRoute)
+app.use("/api/otp", otp_mailer)
+app.use("/api/sendmail", mailer)
 
-app.use((err, req, res, next)=>{
+app.use((err, req, res, next) => {
     const errorStatus = err.status || 500
     const errorMessage = err.message || "Something went wrong"
     return res.status(errorStatus).send(errorMessage)
 })
 
-app.listen(8800, ()=>{
+app.listen(8800, () => {
     console.log(`Backend server is running`)
 })

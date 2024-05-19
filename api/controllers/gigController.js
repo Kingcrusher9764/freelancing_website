@@ -2,7 +2,10 @@ const Gig = require("../models/gigModel")
 const createError = require("../utils/createError")
 
 const createGig = async (req, res, next) => {
-    if (!req.isSeller) return next(createError(403, "Only sellers can create a gig!"))
+    if (!req.isSeller) {
+        console.log("seller variable is not provided")
+        return next(createError(403, "Only sellers can create a gig!"))
+    }
     const newGig = new Gig({
         ...req.body,
         userId: req.userId,
@@ -12,6 +15,7 @@ const createGig = async (req, res, next) => {
         const savedGig = await newGig.save()
         res.status(201).json(savedGig)
     } catch (err) {
+        console.log(err)
         next(err)
     }
 }

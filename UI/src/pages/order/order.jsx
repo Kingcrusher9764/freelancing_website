@@ -52,7 +52,7 @@ const Orders = ()=>{
                     {data.map(order=>(<tr key={order._id} >
                         <td><img className="img" src={order.img} alt="" /></td>
                         <td>{order.title}</td>
-                        <td>$ {order.price}</td>
+                        <td>Rs. {order.price}</td>
                         <td>
                             <img className="message" src="/img/message.png" onClick={()=>handleContact(order)} alt="" />
                         </td>

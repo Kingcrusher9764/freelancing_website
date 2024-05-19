@@ -3,7 +3,6 @@ import "./home.scss"
 import Featured from "../../components/featured/featured"
 import Slide from "../../components/Slide/slide"
 import CatCard from "../../components/CatCard/CatCard"
-import ProjectCard from "../../components/ProjectCard/ProjectCard"
 import {cards, projects} from "../../data"
 
 const Home = ()=>{
@@ -44,7 +43,7 @@ const Home = ()=>{
                         </p>
                     </div>
                     <div className="item">
-                        <video src="./img/video.mp4" controls></video>
+                        <video src="./video/video.mp4" autoPlay controls loop={-1} ></video>
                     </div>
                 </div>
             </div>
@@ -65,18 +64,14 @@ const Home = ()=>{
                             <img src="./img/check.png" alt="" />
                             Manage your independent contractors and hire more staff with a comprehensive SaaS solution.
                         </div>
-                        <button>Explore business</button>
+                        <a href="http://localhost:5173/gigs?search="><button>Explore Gigs</button></a>
                     </div>
                     <div className="item">
                         <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_1.0/v1/attachments/generic_asset/asset/51c35c7cecf75e6a5a0110d27909a2f5-1690202609364/EN.png" alt="" />
                     </div>
                 </div>
             </div>
-            <Slide slidesToShow={4} arrowsScroll={3}>
-                {projects.map(project=>(
-                    <ProjectCard item={project} key={project.id} />
-                ))}
-            </Slide>
+            
         </div>
     )
 }

@@ -71,7 +71,7 @@ const Add = ()=>{
                 <div className="sections">
                     <div className="left">
                         <label htmlFor="">Title</label>
-                        <input name="title" onChange={handleChange} type="text" placeholder="e.g. I will do something I'm really good at" />
+                        <input name="title" onChange={handleChange} type="text" placeholder="e.g. I will do something I'm really good at" required />
                         <label htmlFor="">Category</label>
                         <select name="cat" id="cat" onChange={handleChange}>
                             <option value="ai">AI Artists</option>
@@ -93,19 +93,19 @@ const Add = ()=>{
                             <button onClick={handleUpload}>{uploading ? "uploading" : "Upload" }</button>
                         </div>
                         <label htmlFor="">Description</label>
-                        <textarea onChange={handleChange} name="desc" id="" placeholder="Brief descriptions to introduce your service to customers" cols="30" rows="16"></textarea>
+                        <textarea onChange={handleChange} name="desc" id="" required placeholder="Brief descriptions to introduce your service to customers" cols="30" rows="16"></textarea>
                         <button onClick={handleSubmit}>Create</button>
                     </div>
 
                     <div className="right">
                         <label htmlFor="">Service Title</label>
-                        <input onChange={handleChange} name="shortTitle" type="text" placeholder="e.g. One-page web design" />
+                        <input onChange={handleChange} required name="shortTitle" type="text" placeholder="e.g. One-page web design" />
                         <label htmlFor="">Short Description</label>
-                        <textarea name="shortDesc" onChange={handleChange} id="" cols="30" rows="10" placeholder="Short description of your service"></textarea>
+                        <textarea name="shortDesc" required onChange={handleChange} id="" cols="30" rows="10" placeholder="Short description of your service"></textarea>
                         <label htmlFor="">Delivery Time(e.g. 3 days)</label>
-                        <input onChange={handleChange} name="deliveryTime" type="number" min={1} />
+                        <input onChange={handleChange} required name="deliveryTime" type="number" min={1} />
                         <label htmlFor="">Revision Number</label>
-                        <input name="revisionTime" onChange={handleChange} type="number" min={1} />
+                        <input name="revisionTime" required onChange={handleChange} type="number" min={1} />
                         <label htmlFor="">Add Features</label>
                             <form className="add" action="" onSubmit={handleFeature}>
                                 <input type="text" placeholder="e.g. page design0"/>
@@ -122,7 +122,7 @@ const Add = ()=>{
                                 ))}
                             </div>
                         <label htmlFor="">Price</label>
-                        <input onChange={handleChange} name="price" type="number" min={1}/>
+                        <input onChange={handleChange} required name="price" type="number" min={1}/>
                     </div>
                 </div>
             </div>

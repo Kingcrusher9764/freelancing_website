@@ -34,7 +34,7 @@ const Message = ()=>{
         <div className='message' >
             <div className="container">
                 <span className="breadCrumbs">
-                    <Link to="/messages" className="link" >Messages</Link> - John Doe - 
+                    <Link to="/messages" className="link" >Messages</Link> - 
                 </span>
 
                 {isLoading ? "Loading" : error ? "Something went wrong" : (<div className="messages">

@@ -4,10 +4,10 @@ import "./GigCard.scss"
 import { useQuery } from "@tanstack/react-query"
 import newRequest from "../../utils/newRequest"
 
-const GigCard = ({item})=>{
+const GigCard = ({key, item})=>{
 
     const {isLoading, error, data} = useQuery({
-        queryKey: ['gigUser'],
+        queryKey: [`gigUser${key}`],
         queryFn: ()=>newRequest.get(`/users/${item.userId}`).then((res)=>res.data)
     })
 
@@ -24,7 +24,7 @@ const GigCard = ({item})=>{
                         <img src={data.img || "/img/noavatar.jpg"} alt="" />
                         <span>{data.username}</span>
                     </div>) }
-                    <p>{item.desc}</p>
+                    {/* <p>{item.desc}</p> */}
                     <div className="star">
                         <img src="./img/star.png" alt="" />
                         <span>{ !isNaN(item.totalStars / item.starNumber) && Math.round(item.totalStars / item.starNumber)}</span>
@@ -37,7 +37,7 @@ const GigCard = ({item})=>{
                     <img src="./img/heart.png" alt="" />
                     <div className="pric">
                         <span>Starting At</span>
-                        <h2>${item.price}</h2>
+                        <h2>Rs. {item.price}</h2>
                     </div>
                 </div>
             </div>

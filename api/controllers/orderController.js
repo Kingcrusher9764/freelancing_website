@@ -33,6 +33,9 @@ const intent = async (req, res, next) => {
 
     res.status(200).send({
         clientSecret: paymentIntent.client_secret,
+        price: gig.price,
+        paymentIntentId: paymentIntent.id,
+        sellerId: gig.userId,
     })
 
 }

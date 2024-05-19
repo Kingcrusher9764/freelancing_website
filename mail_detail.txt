@@ -1,0 +1,16 @@
+const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: 'oleta.erdman@ethereal.email',
+        pass: 'vFrwRBUBxV5cDpvczQ'
+    }
+});
+
+Link: https://ethereal.email/create # to create new email
+
+const otpGenerator = require('otp-generator')
+
+otpGenerator.generate(6, { upperCaseAlphabets: false, specialChars: false });
+
+https://ethereal.email/login # to login in the account
